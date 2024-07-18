@@ -1,0 +1,23 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    var s = TempData["model_data"] as List<Student>;
+}
+
+<table class="table table-bordered bg-dark text-white">
+    <tr>
+        <td>Id</td>
+        <td>Name</td>
+        <td>Age</td>
+        <td>Standard</td>
+    </tr>
+    @foreach (var item in s)
+    {
+        <tr>
+            <td>@item.Id</td>
+            <td>@item.Name</td>
+            <td>@item.Age</td>
+            <td>@item.standard</td>
+        </tr>
+    }
+
+</table>
